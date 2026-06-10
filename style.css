@@ -1,0 +1,490 @@
+/* ==========================================================================
+   Apex Marbles - Sapphire Luxury Blue Palette (Clean, Essential Framework)
+   ========================================================================== */
+
+:root {
+    --primary-blue: #0a400d;      /* Deep Royal Sapphire */
+    --secondary-blue: #1c8525;    /* Mid-tone Steel Blue */
+    --accent-blue: #00e41e;       /* Vibrant Electric Sky Blue */
+    --pure-white: #FFFFFF;
+    --light-gray: #F4F7FA;        /* Soft icy background */
+    --dark-text: #1e3b1e;
+    --muted-gray: #648b7f;
+    --border-color: #E2E8F0;
+    
+    --heading-font: 'Poppins', sans-serif;
+    --body-font: 'Inter', sans-serif;
+}
+
+/* Global Elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--body-font);
+    color: var(--dark-text);
+    background-color: var(--pure-white);
+}
+
+body {
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+.alt-bg {
+    background-color: var(--light-gray);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Typography elements */
+h1, h2, h3 {
+    font-family: var(--heading-font);
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 3rem; font-weight: 700; line-height: 1.2; }
+h2 { font-size: 2.2rem; font-weight: 700; }
+h3 { font-size: 1.25rem; font-weight: 600; }
+
+p {
+    color: var(--muted-gray);
+    margin-bottom: 1.5rem;
+}
+
+.tagline {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent-blue);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Flex & Grid Layout Components */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    align-items: center;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+/* Header & Top Bar Layouts */
+.top-bar {
+    background-color: var(--primary-blue);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.8rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bar-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-header {
+    background-color: var(--pure-white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--primary-blue);
+    text-decoration: none;
+    letter-spacing: 1px;
+    margin-left: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-weight: 500;
+    margin-left: 2rem;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-blue);
+}
+
+.nav-links .nav-btn {
+    background-color: var(--secondary-blue);
+    color: var(--pure-white);
+    padding: 0.5rem 1.25rem;
+    border-radius: 4px;
+}
+
+.nav-links .nav-btn:hover {
+    background-color: var(--primary-blue);
+    color: var(--pure-white);
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--primary-blue);
+    cursor: pointer;
+}
+
+/* Hero Elements */
+.hero {
+    padding: 8rem 0;
+    color: var(--pure-white);
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 { color: var(--pure-white); }
+.hero p { color: rgba(255,255,255,0.85); max-width: 600px; font-size: 1.1rem; }
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* UI Action Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.75rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--accent-blue);
+    color: var(--pure-white);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-blue);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--pure-white);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.btn-secondary:hover {
+    background-color: var(--pure-white);
+    color: var(--primary-blue);
+}
+
+/* About Section Media */
+.about-img img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* Structural Product Cards Grid */
+.card {
+    background: var(--pure-white);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-body p {
+    font-size: 0.85rem;
+    margin: 0.5rem 0 1.5rem 0;
+}
+
+.card-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--secondary-blue);
+    text-decoration: none;
+}
+
+.card-link:hover {
+    color: var(--accent-blue);
+}
+
+
+/* ==========================================================================
+   Home Collections - Tiles, Toilets, and Homewares System
+   ========================================================================== */
+
+.section-desc {
+    max-width: 500px;
+    margin: 0 auto 3rem auto;
+    font-size: 0.95rem;
+}
+
+/* Luxury Collection Card Element Framework */
+.collection-card {
+    background: var(--pure-white);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 4px 12px rgba(10, 34, 64, 0.02);
+    display: flex;
+    flex-direction: column;
+}
+
+.collection-img-box {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+}
+
+.collection-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.collection-card:hover .collection-img-box img {
+    transform: scale(1.05);
+}
+
+/* Category Badge Positioning using Accent Blue Shade */
+.category-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: var(--primary-blue);
+    color: var(--pure-white);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.35rem 0.75rem;
+    border-radius: 2px;
+    border-left: 2px solid var(--accent-blue);
+}
+
+.collection-content {
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.collection-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+}
+
+.collection-content p {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+}
+
+/* Inline Specifications List */
+.spec-list {
+    list-style: none;
+    margin-bottom: 2rem;
+    padding: 0;
+}
+
+.spec-list li {
+    font-size: 0.82rem;
+    color: var(--secondary-blue);
+    font-weight: 500;
+    margin-bottom: 0.35rem;
+}
+
+/* Streamlined Link Button using Steel Blue Shades */
+.btn-collection {
+    display: block;
+    text-align: center;
+    background-color: var(--light-gray);
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.75rem;
+    border-radius: 4px;
+    margin-top: auto;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.btn-collection:hover {
+    background-color: var(--secondary-blue);
+    color: var(--pure-white);
+    border-color: var(--secondary-blue);
+}
+
+/* Service Boxes Minimal Framework */
+.service-box {
+    background: var(--pure-white);
+    padding: 2.5rem 1.5rem;
+    border-radius: 4px;
+    border-top: 3px solid var(--secondary-blue);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+}
+
+.service-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.service-box p {
+    font-size: 0.85rem;
+    margin-bottom: 0;
+}
+
+/* Form Panel System Configuration */
+.contact-details p {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.contact-form {
+    background: var(--pure-white);
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-family: var(--body-font);
+    font-size: 0.9rem;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+}
+
+.contact-form .btn {
+    width: 100%;
+}
+
+/* Footer Element Configuration */
+.footer {
+    background-color: var(--primary-blue);
+    color: rgba(255,255,255,0.6);
+    padding: 1.5rem 0;
+    font-size: 0.85rem;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   Responsive Breakpoint Rules (Mobile First Layout Engineering)
+   ========================================================================== */
+
+@media (max-width: 991px) {
+    .grid-2, .grid-3 { grid-template-columns: 1fr; gap: 2rem; }
+    .hero h1 { font-size: 2.3rem; }
+}
+
+@media (max-width: 767px) {
+    .bar-flex { flex-direction: column; text-align: center; gap: 0.25rem; }
+    .hamburger { display: block; }
+    
+    .nav-links {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: var(--pure-white);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        padding: 1.5rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-links.open {
+        display: flex;
+    }
+    
+    .nav-links a {
+        margin-left: 0;
+        display: block;
+        padding: 0.5rem 0;
+    }
+    
+    .nav-links .nav-btn {
+        text-align: center;
+        margin-top: 0.5rem;
+    } 
+   
+    .footer-flex { flex-direction: column; gap: 1rem; text-align: center; }
+}
